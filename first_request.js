@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
 var request = require("request");
+var PORT = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 
@@ -22,6 +23,6 @@ app.get("/results", function(req, res) {
     
 });
 
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(PORT, process.env.IP, function(){
     console.log("Movie App has started!!!");
 });
